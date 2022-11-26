@@ -51,7 +51,7 @@ nav {
     justify-content: space-around;
 }
 nav a{
-    
+    font-size: 24px;
     color: var(--nav-link-color);
     text-decoration: none;
     padding: 35px;
