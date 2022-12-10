@@ -5,11 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="javaScript/script.js"></script>
 </head>
 <body>
 
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html">Knowlege Page</a>
+          <a href="star_store.html">Star Store</a>
+          <a href="contact_us.html">Contact Us</a>
+        </div>
+      
+    </div>
+    
     <header>
-        <img src="images/logo.png" alt="logo_picture">
+        <img src="images/logo.png" onclick="openNav()" alt="logo_picture">
         <nav>
             <a href="index.html">Knowledge Page</a>
             <a href="star_store.html">Star Store</a>
@@ -17,16 +32,49 @@
         </nav>
     </header>
 
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+      
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <img src="images/logo.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+      
+            <button type="button">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
 
     <main>
         <div class="welcome_area">
-            <h2>Contact Us</h2>
-            <img src="images/contact2.png" alt="call_picture">
+            <h3 class="contact_header">Contact Us</h3>
+            <img class="contact_pic"src="images/contact2.png" alt="call_picture">
         </div>
 
         <div class="email_area">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ex, quibusdam, rerum incidunt quas odit a tenetur quidem adipisci fuga soluta perferendis minus. Ratione, quod incidunt fuga nulla deleniti nisi.</p>
-            <button id="email_button">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ex, quibusdam, rerum incidunt quas odit a tenetur quidem adipisci fuga soluta perferendis minus. Ratione, quod incidunt fuga nulla deleniti nisi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ex, quibusdam, rerum incidunt quas odit a tenetur quidem adipisci fuga soluta perferendis minus. Ratione, quod incidunt fuga nulla deleniti nisi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ex, quibusdam, rerum incidunt quas odit a tenetur quidem adipisci fuga soluta perferendis minus. Ratione, quod incidunt fuga nulla deleniti nisi.
+                
+            </p>
+            <button class="email_button">
                 Email/Text me!
             </button>
         </div>
@@ -34,32 +82,30 @@
         <div class="mobile_app">
             <h4>Download the mobile app!</h4>
             <img src="images/contact1.jpg" alt="phone_picture">
-            <div id="mobile_picture">
-                <img src="images/icon1.png" alt="mobile_icon">
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="Password">
-                <button>Log in</button>
+            <div class="mobile_picture">
+                <img class="mobile_icon" src="images/icon2.png" alt="mobile_icon">
+                <input class="input1" type="text" placeholder="Username">
+                <input class="input2" type="text" placeholder="Password">
+                <button class="mobile_button" onclick="document.getElementById('id01').style.display='block'">Log in</button>
             </div>
         </div>
     </main>
     
 
     <footer>
-        <div class="footer-box">
-            <h4>Star IQ - Brock Ford - 2022</h4>
-            <a href="site-plan.html">Site Plan</a>
-            
-            <div class="social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.png" alt="fb icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="images/twitter.png" alt="twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="images/instagram.png" alt="instagram icon">
-                </a>
-            </div>
+        <h4>Star IQ - Brock Ford - 2022</h4>
+        <a href="site-plan.html">Site Plan</a>
+        
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
         </div>
 
     </footer>
